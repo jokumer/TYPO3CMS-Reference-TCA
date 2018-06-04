@@ -8,11 +8,10 @@ customControls
     Display
 
 :aspect:`Description`
-   Numerical array containing definitions of custom header controls for IRRE fields. This makes it possible to create
-   special controls by calling user-defined functions (userFuncs). Each item in the array item must be an array itself,
-   with at least on key "userFunc" pointing to the user function to call.
-
-   The userFunc string is defined as usual in TYPO3 as ['class']->['method'], e.g. ::
+   Numerical array containing the user function to call. The user function must return HTML.
+   This makes it possible to create custom header controls for IRRE fields.
+   
+   The user function string is defined as usual in TYPO3 as ['class']->['method'], e.g. ::
 
       Vendor\\Extension\\MyClass::class . '->myUserFuncMethod'
 
